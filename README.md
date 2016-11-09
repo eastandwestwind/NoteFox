@@ -7,5 +7,5 @@ To compile and run: `npm start`
 
 To shut down: `Ctrl-C`
 
-[travis-badge]: https://travis-ci.org/eastandwestwind/NoteFox?branch=master
+[travis-badge]: https://travis-ci.org/eastandwestwind/NoteFox.svg?branch=master
 [travis-badge-url]: https://travis-ci.org/eastandwestwind/NoteFox
