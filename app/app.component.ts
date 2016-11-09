@@ -6,7 +6,7 @@ const NOTES: Note[] = [];
 
 @Component({
     selector: 'my-notes',
-    template:`
+    template: `
     <h1>{{title}}</h1>
     <button (click)="NewNote()">New Note +</button>
     <ul class="notes">
@@ -75,8 +75,8 @@ export class AppComponent {
   onSelect(note: Note): void {
     this.selectedNote = note;
   }
-  NewNote(){
-    NOTES.push({ id: 20, name: 'New Note' , text:""});
+  NewNote() {
+    NOTES.push({ id: 20, name: 'New Note' , text:'' });
   }
 }
 
