@@ -2,18 +2,17 @@ import { Component } from '@angular/core';
 import { Note } from './note';
 
 
-const NOTES: Note[] = [
-  {id:13, name:"notes1", text: ""}
-];
+const NOTES: Note[] = [];
 
 @Component({
-    selector: 'my-app',
+    selector: 'my-notes',
     template:`
     <h1>{{title}}</h1>
     <button (click)="NewNote()">New Note +</button>
     <ul class="notes">
       <li *ngFor="let note of notes" [class.selected]="note === selectedNote" (click)="onSelect(note)">
-        <span class="badge">{{note.id}}</span> {{note.name}}
+        <span class="badge" ng-style="color">{{note.id}}</span> 
+        <span>{{note.name}}</span>
       </li>
     </ul>
     <my-note-detail [note]="selectedNote"></my-note-detail>
@@ -77,7 +76,7 @@ export class AppComponent {
     this.selectedNote = note;
   }
   NewNote(){
-    NOTES.push({ id: 2, name: 'New Note' , text:""});
+    NOTES.push({ id: 20, name: 'New Note' , text:""});
   }
 }
 

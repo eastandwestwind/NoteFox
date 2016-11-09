@@ -5,25 +5,29 @@ import { Note } from './note';
   selector: 'my-note-detail',
   template: `
   <div *ngIf="note">
-    <h2>{{note.name}}</h2>
+    <span>name: <input [(ngModel)]="note.name" placeholder="name"/></span>
   <div>
-    <label>name: </label>
-  <input [(ngModel)]="note.name" placeholder="name"/>
-  <div><label>id: </label>{{note.id}}</div>
-  <input [(ngModel)]="note.text" placeholder="type here"/>
-  </div>
-  </div>
-  <!--if new note-->
-  <div *ngIf="NewNote">
-    <h2>{{note.name}}</h2>
   <div>
-    <label>name: </label>
-  <input [(ngModel)]="note.name" placeholder="name"/>
-  <div><label>id: </label>{{note.id}}</div>
-  <input [(ngModel)]="note.text" placeholder="type here"/>
+  <button class="SetColor SetBlue" ng-click="color={'background-color':'blue'}"></button>
+  <button class="SetColor SetGreen" ng-click="color={'background-color':'red'}"></button>
+  </div>
+  <textarea [(ngModel)]="note.text" placeholder="type here" rows="10"></textarea>
   </div>
   </div>
-  `
+  `,
+  styles: [`
+    .SetColor{
+      height: 20px;
+      width: 20px;
+      border-radius: 0px;
+    }
+    .SetBlue {
+      background-color: aquamarine;
+    }
+    .SetGreen {
+      background-color: red;
+    }
+`]
 })
 
 export class NoteContentComponent {
