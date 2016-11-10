@@ -76,7 +76,8 @@ export class AppComponent {
     this.selectedNote = note;
   }
   NewNote() {
-    NOTES.push({ id: 20, name: 'New Note' , text:'' });
+    NOTES.push({ id: 20, name: 'New Note' , text:' ' });
+    this.selectedNote = NOTES[NOTES.length-1];
   }
 }
 
